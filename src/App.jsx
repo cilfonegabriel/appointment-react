@@ -4,11 +4,11 @@ import PatientList from "./components/patientList"
 
 function App() {
   return (
-  <>
+  <div className="container mx-auto mt-20">
     <Header />
     <Form />
     <PatientList />
-  </>    
+  </div>    
   )
 }
 
