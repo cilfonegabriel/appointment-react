@@ -2,13 +2,26 @@ const Form = () => {
   return (
     <div className="md:w-1/2 lg:w-2/5">
       <h2 className="font-black text-3xl text-center">Patient follow-up</h2>
-      <p className="text-lg mt-5 text-center">
+      <p className="text-lg mt-5 text-center mb-10">
         Add patients and {""}
         <span className="text-indigo-600 font-bold">Manage them</span>
       </p>
 
-      <form>
-        
+      <form className="bg-white shadow-md rounded-lg py-10 px-5">
+        <div>
+
+            <label htmlFor="pet" className="block text-gray-700 uppercase font-bold ">
+                Name pet 
+            </label>
+
+            <input
+                id="pet"
+                type="text"
+                placeholder="Name of pet"
+                className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            />
+        </div>
+
       </form>
     </div>
   )
