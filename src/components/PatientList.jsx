@@ -1,6 +1,7 @@
 import Patient from "./Patient"
 
-const PatientList = () => {
+const PatientList = ({patients}) => {
+
   return (
     <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
 
@@ -10,12 +11,15 @@ const PatientList = () => {
         <span className="text-indigo-600 font-bold">Patients and lists</span>
       </p>
 
-      <Patient/>
-      <Patient/>
-
-
+      { patients.map( (patient, index) =>(
+        <Patient
+            key={index}
+            patient={patient}
+        />
+      ))}
     </div>
   )
 }
 
 export default PatientList
+ 
