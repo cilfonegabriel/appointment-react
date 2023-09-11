@@ -1,11 +1,17 @@
 import { useState } from "react"
 import Header from "./components/Header"
 import Form from "./components/Form"
-import PatientList from "./components/patientList"
+import PatientList from "./components/PatientList"
 
 function App() {
 
   const[patients, setPatients] = useState([]);
+  const [patient, setPatient] = useState({});
+
+  const deletePatient = id => {
+    const updatePatients = patients.filter( patient => patient.id !== id);
+    setPatients(updatePatients)
+  };
 
   return (
   <div className="container mx-auto mt-20">
@@ -17,9 +23,13 @@ function App() {
       <Form
         patients = {patients}
         setPatients={setPatients}
+        patient = {patient}
+        setPatient = {setPatient}
       />
       <PatientList 
         patients = {patients}
+        setPatient = {setPatient}
+        deletePatient = {deletePatient}
       />
     </div>
 
