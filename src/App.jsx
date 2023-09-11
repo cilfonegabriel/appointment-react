@@ -18,6 +18,7 @@ function App() {
       <Form
         patients = {patients}
         setPatients={setPatients}
+        patient = {patient}
       />
       <PatientList 
         patients = {patients}
