@@ -11,7 +11,11 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log('Enviando formulario')
+        if([name, owner, email, date, symptoms].includes('')){
+            console.log('There is at least one empty field')
+        } else {
+            console.log('All full')
+        }
     }
 
   return (
