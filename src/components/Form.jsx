@@ -10,6 +10,13 @@ const Form = ({ patients, setPatients }) => {
 
     const[error, setError] = useState(false);
 
+    const generateId = () => {
+        const random = Math.random().toString(36).substring(2);
+        const fecha = Date.now().toString(36)
+
+        return random + fecha
+    }
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,7 +34,8 @@ const Form = ({ patients, setPatients }) => {
             owner,
             email,
             date,
-            symptoms
+            symptoms,
+            id: generateId()
         }
 
         setPatients([...patients, objectPatient]);
