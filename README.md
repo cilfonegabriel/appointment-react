@@ -1,9 +1,9 @@
 <div align="center">
-
-  <img src="image.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
+  
   <h3><b>Appointment React App</b></h3>
+
+  <img src="image.png" alt="logo" height="auto" />
+  <br/>
 
 </div>
 
